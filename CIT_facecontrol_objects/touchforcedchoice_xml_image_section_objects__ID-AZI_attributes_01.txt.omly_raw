@@ -1,0 +1,23 @@
+ <Media>
+ <Image Name = "ID_alarmclock156-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_alarmclock156_ALOI_objects-none-ORI_A-45_E00-alarmclock156.png" Attr = "objects;ID_alarmclock156;AZI_-45"> </Image>
+ <Image Name = "ID_alarmclock156-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_alarmclock156_ALOI_objects-none-ORI_A00_E00-alarmclock156.png" Attr = "objects;ID_alarmclock156;AZI_000"> </Image>
+ <Image Name = "ID_alarmclock156-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_alarmclock156_ALOI_objects-none-ORI_A45_E00-alarmclock156.png" Attr = "objects;ID_alarmclock156;AZI_045"> </Image>
+ <Image Name = "ID_apple82-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_apple82_ALOI_objects-none-ORI_A-45_E00-apple82.png" Attr = "objects;ID_apple82;AZI_-45"> </Image>
+ <Image Name = "ID_apple82-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_apple82_ALOI_objects-none-ORI_A00_E00-apple82.png" Attr = "objects;ID_apple82;AZI_000"> </Image>
+ <Image Name = "ID_apple82-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_apple82_ALOI_objects-none-ORI_A45_E00-apple82.png" Attr = "objects;ID_apple82;AZI_045"> </Image>
+ <Image Name = "ID_egg787-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_egg787_ALOI_objects-none-ORI_A-45_E00-egg787.png" Attr = "objects;ID_egg787;AZI_-45"> </Image>
+ <Image Name = "ID_egg787-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_egg787_ALOI_objects-none-ORI_A00_E00-egg787.png" Attr = "objects;ID_egg787;AZI_000"> </Image>
+ <Image Name = "ID_egg787-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_egg787_ALOI_objects-none-ORI_A45_E00-egg787.png" Attr = "objects;ID_egg787;AZI_045"> </Image>
+ <Image Name = "ID_fc_cross-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_fc_cross_CIT_2D_objects-none-ORI_A-45_E00-fc_cross.png" Attr = "objects;ID_fc_cross;AZI_-45"> </Image>
+ <Image Name = "ID_fc_cross-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_fc_cross_CIT_2D_objects-none-ORI_A00_E00-fc_cross.png" Attr = "objects;ID_fc_cross;AZI_000"> </Image>
+ <Image Name = "ID_fc_cross-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_fc_cross_CIT_2D_objects-none-ORI_A45_E00-fc_cross.png" Attr = "objects;ID_fc_cross;AZI_045"> </Image>
+ <Image Name = "ID_fc_ellipse-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_fc_ellipse_CIT_2D_objects-none-ORI_A-45_E00-fc_ellipse.png" Attr = "objects;ID_fc_ellipse;AZI_-45"> </Image>
+ <Image Name = "ID_fc_ellipse-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_fc_ellipse_CIT_2D_objects-none-ORI_A00_E00-fc_ellipse.png" Attr = "objects;ID_fc_ellipse;AZI_000"> </Image>
+ <Image Name = "ID_fc_ellipse-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_fc_ellipse_CIT_2D_objects-none-ORI_A45_E00-fc_ellipse.png" Attr = "objects;ID_fc_ellipse;AZI_045"> </Image>
+ <Image Name = "ID_orange446-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_orange446_ALOI_objects-none-ORI_A-45_E00-orange446.png" Attr = "objects;ID_orange446;AZI_-45"> </Image>
+ <Image Name = "ID_orange446-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_orange446_ALOI_objects-none-ORI_A00_E00-orange446.png" Attr = "objects;ID_orange446;AZI_000"> </Image>
+ <Image Name = "ID_orange446-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_orange446_ALOI_objects-none-ORI_A45_E00-orange446.png" Attr = "objects;ID_orange446;AZI_045"> </Image>
+ <Image Name = "ID_teapot161-ORI_A-45_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_teapot161_ALOI_objects-none-ORI_A-45_E00-teapot161.png" Attr = "objects;ID_teapot161;AZI_-45"> </Image>
+ <Image Name = "ID_teapot161-ORI_A000_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_teapot161_ALOI_objects-none-ORI_A00_E00-teapot161.png" Attr = "objects;ID_teapot161;AZI_000"> </Image>
+ <Image Name = "ID_teapot161-ORI_A045_E000-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\CIT_facecontrol_objects\ID_teapot161_ALOI_objects-none-ORI_A45_E00-teapot161.png" Attr = "objects;ID_teapot161;AZI_045"> </Image>
+ </Media>
