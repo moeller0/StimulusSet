@@ -1,0 +1,5 @@
+ <Media>
+ <Image Name = "ID_r002_130115-ORI_A000_E010-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\BW_objects_and_faces_01\ID_r002_130115-EXP_033.0pct_None-ORI_A000_E010.jpg" Attr = "objects;ID_r002_130115"> </Image>
+ <Image Name = "ID_r003_130115-ORI_A000_E010-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\BW_objects_and_faces_01\ID_r003_130115-EXP_033.0pct_None-ORI_A000_E010.jpg" Attr = "objects;ID_r003_130115"> </Image>
+ <Image Name = "ID_r004_130115-ORI_A000_E010-TRF_none" FileName = "\\KOFIKO-USER-23A\StimulusSet\BW_objects_and_faces_01\ID_r004_130115-EXP_033.0pct_None-ORI_A000_E010.jpg" Attr = "objects;ID_r004_130115"> </Image>
+ </Media>
