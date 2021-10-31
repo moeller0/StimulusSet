@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+    <TrialTypes>
+
+          <!-- ********************************************************************************************* -->
+        <Trial>
+            <TrialParams Name = "BasicTraining"  CueType = "NoCue"  ChoicesType = "NoChoices" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "60000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "0" FixationSpotSize = "38" FixationSpotType = "Disc" FixationRegion = "63" FixationPosition = "Random" AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "1" RewardSound = "CorrectTrialSoundFile" >  </PreCueFixation>
+            <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "3000" > </PostChoice>
+        </Trial>         
+          <!-- ********************************************************************************************* -->
+        
+       
+        <Trial>
+            <TrialParams Name = "IdentityMatching_Same_Exp1" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "3000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "1000" FixationSpotSize = "19" FixationSpotType = "Triangle" FixationRegion = "150" FixationPosition = "0 0" FixationColor = "255 0 0"  AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp1" CueInvalidAttributes = "" CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "200"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <Cue CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = ""  CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "13" MemoryPeriodMS = "0"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <MemoryPeriod MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+           <Choices>
+                <ChoicesParam HoldToSelectChoiceMS = "0" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" InsideChoiceRegionSize = "125" KeepCueOnScreen = "0" > </ChoicesParam>                    
+                <Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "150" > </Choice>
+                <Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "0" SizePix = "150" > </Choice>                 
+            </Choices>
+              <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "1000" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+        </Trial>               
+             
+
+        <Trial>
+            <TrialParams Name = "IdentityMatching_Same_Exp1_singlechoice" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "3000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "1000" FixationSpotSize = "19" FixationSpotType = "Triangle" FixationRegion = "150" FixationPosition = "0 0" FixationColor = "255 0 0"  AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp1" CueInvalidAttributes = "" CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "200"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <Cue CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = ""  CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "13" MemoryPeriodMS = "0"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <MemoryPeriod MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+           <Choices>
+                <ChoicesParam HoldToSelectChoiceMS = "0" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" InsideChoiceRegionSize = "125" KeepCueOnScreen = "0" > </ChoicesParam>                    
+                <Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "150" > </Choice>
+
+            </Choices>
+              <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "1000" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+        </Trial>               
+             
+    <Trial>
+            <TrialParams Name = "IdentityMatching_Diff_Exp1" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "3000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "1000" FixationSpotSize = "19" FixationSpotType = "Triangle" FixationRegion = "150" FixationPosition = "0 0" FixationColor = "255 0 0"  AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp1" CueInvalidAttributes = "" CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "200"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp1" CueInvalidAttributes = "CueAttributes(1)"  CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "0"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <MemoryPeriod MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+           <Choices>
+                <ChoicesParam HoldToSelectChoiceMS = "0" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" InsideChoiceRegionSize = "125" KeepCueOnScreen = "0" > </ChoicesParam>                    
+                <Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "0" SizePix = "150" > </Choice>
+                <Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "1" SizePix = "150" > </Choice>                 
+            </Choices>
+              <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "1000" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+        </Trial>               
+                             
+
+    <Trial>
+            <TrialParams Name = "IdentityMatching_Diff_Exp1_singlechoice" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "3000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "1000" FixationSpotSize = "19" FixationSpotType = "Triangle" FixationRegion = "150" FixationPosition = "0 0" FixationColor = "255 0 0"  AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp1" CueInvalidAttributes = "" CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "200"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp1" CueInvalidAttributes = "CueAttributes(1)"  CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "0"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <MemoryPeriod MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+           <Choices>
+                <ChoicesParam HoldToSelectChoiceMS = "0" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" InsideChoiceRegionSize = "125" KeepCueOnScreen = "0" > </ChoicesParam>                    
+                <Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "1" SizePix = "150" > </Choice>                 
+            </Choices>
+              <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "1000" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+        </Trial>               
+
+
+        <Trial>
+            <TrialParams Name = "IdentityMatching_Same_Exp2" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "3000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "1000" FixationSpotSize = "19" FixationSpotType = "Triangle" FixationRegion = "150" FixationPosition = "0 0" FixationColor = "255 0 0"  AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp2" CueInvalidAttributes = "" CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "200"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <Cue CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = ""  CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "13" MemoryPeriodMS = "0"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <MemoryPeriod MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+           <Choices>
+                <ChoicesParam HoldToSelectChoiceMS = "0" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" InsideChoiceRegionSize = "125" KeepCueOnScreen = "0" > </ChoicesParam>                    
+                <Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "150" > </Choice>
+                <Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "0" SizePix = "150" > </Choice>                 
+            </Choices>
+              <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "1000" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+        </Trial>               
+             
+        <Trial>
+            <TrialParams Name = "IdentityMatching_Same_Exp2_singlechoice" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" JuiceMS = "70" MultipleSaccades = "0" TrialTimeoutMS = "3000" > </TrialParams>
+            <PreCueFixation PreCueFixationPeriodMS = "1000" FixationSpotSize = "19" FixationSpotType = "Triangle" FixationRegion = "150" FixationPosition = "0 0" FixationColor = "255 0 0"  AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+            <Cue CueMedia = "Random" CueValidAttributes = "IdentityMatching_Exp2" CueInvalidAttributes = "" CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "13" MemoryPeriodMS = "200"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <Cue CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = ""  CuePeriodMS = "500" CueNoiseLevel = "0" CueSizePix = "125" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "13" MemoryPeriodMS = "0"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1">  </Cue>
+            <MemoryPeriod MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+           <Choices>
+                <ChoicesParam HoldToSelectChoiceMS = "0" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" InsideChoiceRegionSize = "100" KeepCueOnScreen = "0" > </ChoicesParam>                    
+                <Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "150" > </Choice>
+            </Choices>
+              <PostChoice InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" IncorrectTrialPunishmentDelayMS = "1000" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+        </Trial>               
+              
+
+
+      
+        
+    </TrialTypes>
+
+     <TrialOrder>
+        
+         <Block Types = "IdentityMatching_Same_Exp1_singlechoice" NumTrials = "5" RepeatIncorrect = "1">  </Block>
+         <Block Types = "IdentityMatching_Diff_Exp1_singlechoice" NumTrials = "5" RepeatIncorrect = "1">  </Block>
+	 <Block Types = "IdentityMatching_Same_Exp1" NumTrials = "5" RepeatIncorrect = "1">  </Block>
+         <Block Types = "IdentityMatching_Diff_Exp1" NumTrials = "5" RepeatIncorrect = "1">  </Block>
+         <Block Types = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1" NumTrials = "150" RepeatIncorrect = "1">  </Block>
+
+              
+    </TrialOrder>         
+   
+     <Media>
+        
+        <Image Name = "GreenCheck" FileName = "\\KOFIKO-USER-23A\StimulusSet\Doris_IdentityMatching\GreenCheck.png" Attr = ""> </Image>
+        <Image Name = "RedCross" FileName = "\\KOFIKO-USER-23A\StimulusSet\Doris_IdentityMatching\RedCross.png" Attr = ""> </Image>
+            
+          
+        <Image Name = "Tomato-1" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0034.jpg" Attr = "IdentityMatching_Exp1;Tomato"> </Image>
+        <Image Name = "Tomato-2" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0002.jpg" Attr = "IdentityMatching_Exp1;Tomato"> </Image>
+        <Image Name = "Tomato-3" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0003.jpg" Attr = "IdentityMatching_Exp1;Tomato"> </Image>
+        <Image Name = "Tomato-4" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0004.jpg" Attr = "IdentityMatching_Exp1;Tomato"> </Image>
+        <Image Name = "Tomato-5" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0045.jpg" Attr = "IdentityMatching_Exp1;Tomato"> </Image>
+
+        <Image Name = "Grapes-1" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0002.jpg" Attr = "IdentityMatching_Exp1;Grapes"> </Image>
+        <Image Name = "Grapes-2" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0003.jpg" Attr = "IdentityMatching_Exp1;Grapes"> </Image>
+        <Image Name = "Grapes-3" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0006.jpg" Attr = "IdentityMatching_Exp1;Grapes"> </Image>
+        <Image Name = "Grapes-4" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0018.jpg" Attr = "IdentityMatching_Exp1;Grapes"> </Image>
+        <Image Name = "Grapes-5" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0032.jpg" Attr = "IdentityMatching_Exp1;Grapes"> </Image>
+
+
+        <Image Name = "Tomato-1a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0034.jpg" Attr = "IdentityMatching_Exp2;Tomato1"> </Image>
+        <Image Name = "Tomato-2a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0002.jpg" Attr = "IdentityMatching_Exp2;Tomato2"> </Image>
+        <Image Name = "Tomato-3a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0003.jpg" Attr = "IdentityMatching_Exp2;Tomato3"> </Image>
+        <Image Name = "Tomato-4a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0004.jpg" Attr = "IdentityMatching_Exp2;Tomato4"> </Image>
+        <Image Name = "Tomato-5a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\221.tomato\221_0045.jpg" Attr = "IdentityMatching_Exp2;Tomato5"> </Image>
+
+        <Image Name = "Grapes-1a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0002.jpg" Attr = "IdentityMatching_Exp2;Grapes1"> </Image>
+        <Image Name = "Grapes-2a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0003.jpg" Attr = "IdentityMatching_Exp2;Grapes2"> </Image>
+        <Image Name = "Grapes-3a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0006.jpg" Attr = "IdentityMatching_Exp2;Grapes3"> </Image>
+        <Image Name = "Grapes-4a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0018.jpg" Attr = "IdentityMatching_Exp2;Grapes4"> </Image>
+        <Image Name = "Grapes-5a" FileName = "\\KOFIKO-USER-23A\StimulusSet\Caltech256\092.grapes\092_0032.jpg" Attr = "IdentityMatching_Exp2;Grapes5"> </Image>
+
+
+    </Media>
+   
+</Config>

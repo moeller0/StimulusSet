@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+	
+	<Media>
+		
+ 		<Image Name = "ID_BR-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_06_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.bmp" Attr = "TRFs;cartoon_face;face;cartoon;ID_06"> </Image>
+ 		<Image Name = "ID_BR-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing2.png" Attr = "TRFs;linedrawing_face;face;linedrawing;ID_BR"> </Image>
+ 		<Image Name = "ID_BR-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "TRFs;mooney_face;face;mooney;ID_BR"> </Image>
+ 		<Image Name = "ID_BR-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.tif" Attr = "TRFs;silhouette_face;face;silhouette;ID_BR"> </Image>
+ 		<Image Name = "ID_BT-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_08_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.bmp" Attr = "TRFs;cartoon_face;face;cartoon;ID_08"> </Image>
+ 		<Image Name = "ID_BT-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing2.png" Attr = "TRFs;linedrawing_face;face;linedrawing;ID_BT"> </Image>
+ 		<Image Name = "ID_BT-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "TRFs;mooney_face;face;mooney;ID_BT"> </Image>
+ 		<Image Name = "ID_BT-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.jpg" Attr = "TRFs;silhouette_face;face;silhouette;ID_BT"> </Image>
+ 		<Image Name = "ID_SN-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_13_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.bmp" Attr = "TRFs;cartoon_face;face;cartoon;ID_13"> </Image>
+ 		<Image Name = "ID_SN-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing2.png" Attr = "TRFs;linedrawing_face;face;linedrawing;ID_SN"> </Image>
+ 		<Image Name = "ID_SN-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "TRFs;mooney_face;face;mooney;ID_SN"> </Image>
+ 		<Image Name = "ID_SN-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.tif" Attr = "TRFs;silhouette_face;face;silhouette;ID_SN"> </Image>
+ 		<Image Name = "ID_WM-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_38_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.bmp" Attr = "TRFs;cartoon_face;face;cartoon;ID_38"> </Image>
+ 		<Image Name = "ID_WM-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing2.png" Attr = "TRFs;linedrawing_face;face;linedrawing;ID_WM"> </Image>
+ 		<Image Name = "ID_WM-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "TRFs;mooney_face;face;mooney;ID_WM"> </Image>
+ 		<Image Name = "ID_WM-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.jpg" Attr = "TRFs;silhouette_face;face;silhouette;ID_WM"> </Image>
+ 	</Media>
+	<Blocks>
+		<Block Name = "TRFs" Attr = "TRFs" > </Block>
+	</Blocks>
+	
+	<BlockOrder>
+		<Order Name = "Default Order">
+			<Block Name = "TRFs" Repitition = "10000" > </Block>
+		</Order>
+	</BlockOrder>
+	
+	<Conditions>
+		<Condition Name = "cartoon_face" ValidAttributes = "cartoon_face" DefaultVisibility = "1"> </Condition>
+		<Condition Name = "linedrawing_face" ValidAttributes = "linedrawing_face" DefaultVisibility = "1"> </Condition>
+		<Condition Name = "mooney_face" ValidAttributes = "mooney_face" DefaultVisibility = "1"> </Condition>
+		<Condition Name = "silhouette_face" ValidAttributes = "silhouette_face" DefaultVisibility = "1"> </Condition>		
+	
+		<Condition Name = "Faces" ValidAttributes = "face" DefaultVisibility = "1"> </Condition>
+	
+		<Condition Name = "cartoon" ValidAttributes = "cartoon" DefaultVisibility = "1"> </Condition>
+		<Condition Name = "linedrawing" ValidAttributes = "linedrawing" DefaultVisibility = "1"> </Condition>
+		<Condition Name = "mooney" ValidAttributes = "mooney" DefaultVisibility = "1"> </Condition>
+		<Condition Name = "silhouette" ValidAttributes = "silhouette" DefaultVisibility = "1"> </Condition>		
+		
+
+	</Conditions>
+	
+	<StatServer
+		NumTrialsInCircularBuffer = "200"
+		Pre_TimeSec = "0.2"
+		Post_TimeSec = "0.2"
+	> </StatServer>   
+	
+	
+</Config>

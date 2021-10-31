@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+	
+	<GlobalVars>
+		<Var Name = "JuiceTimeMS" 					InitialValue = "60" 	Type = "Numeric" 	Panel = "Reward"		Description = "Juice time  (ms)" > </Var>
+		<Var Name = "FixationRegionPix"				InitialValue = "185" 	Type = "Numeric" 	Panel = "Reward"		Description = "Fixation region (pix)" > </Var>
+		<Var Name = "ResponseRegionPix"				InitialValue = "150" 	Type = "Numeric" 	Panel = "Reward"		Description = "Response region (pix)" > </Var>
+		
+		<Var Name = "TrialTimeoutMS" 				InitialValue = "1500" 	Type = "Numeric" 	Panel = "Timing"		Description = "Trial timeout (ms)" > </Var>
+		<Var Name = "DelayBeforeCueMS" 				InitialValue = "1000" 	Type = "Numeric" 	Panel = "Timing"		Description = "Fixate before Cue(ms)" > </Var>   
+		<Var Name = "CuePeriodMS" 					InitialValue = "500" 	Type = "Numeric" 	Panel = "Timing"		Description = "Cue period (ms)" > </Var>
+		<Var Name = "LastCuePeriodMS" 				InitialValue = "50" 	Type = "Numeric" 	Panel = "Timing"		Description = "Last Cue period (ms)" > </Var>
+		<Var Name = "InterCueDelayMS" 				InitialValue = "400" 	Type = "Numeric" 	Panel = "Timing"		Description = "Inter Cue Memory period (ms)" > </Var>
+		<Var Name = "PreChoiceDelayMS" 				InitialValue = "0"		Type = "Numeric" 	Panel = "Timing"		Description = "Pre-Choice period (ms)" > </Var>
+		<Var Name = "FalseResponseTimeOutMS"		InitialValue = "3000" 	Type = "Numeric" 	Panel = "Timing"		Description = "False response timeout (ms)" > </Var>
+		<Var Name = "HoldToSelectChoiceMS"			InitialValue = "50" 	Type = "Numeric" 	Panel = "Timing"		Description = "required fixation on choice (ms)" > </Var>
+		
+		
+		<Var Name = "PreCueFixationSpotSizePix" 	InitialValue = "19"		Type = "Numeric" 	Panel = "Stimuli"		Description = "PreCue Fixaiton size (pix)" > </Var>
+		<Var Name = "FixationSpotSizePix" 			InitialValue = "10"		Type = "Numeric" 	Panel = "Stimuli"		Description = "Fixaiton size (pix)" > </Var>
+		<Var Name = "CueSizePix" 					InitialValue = "125" 	Type = "Numeric" 	Panel = "Stimuli"		Description = "Cue size (pix)" > </Var>
+		<Var Name = "ChoiceSizePix" 				InitialValue = "150" 	Type = "Numeric" 	Panel = "Stimuli"		Description = "Choice size (pix)" > </Var>
+		<Var Name = "KeepCueOnScreen"				InitialValue = "1"		Type = "Boolean"	Panel = "Stimuli"		Description = "Show last Cue during Choice" > </Var>
+		
+		<Var Name = "Cue1MicroStimActive" 			InitialValue = "0"		Type = "Boolean"	Panel = "Microstim"		Description = "1. Cue Microstim active" > </Var>
+		<Var Name = "Cue1MicroStimDelayMS" 			InitialValue = "75"		Type = "Numeric"	Panel = "Microstim"		Description = "1. Cue Delay to trigger (ms)" > </Var>
+		<Var Name = "Cue2MicroStimActive" 			InitialValue = "0"		Type = "Boolean"	Panel = "Microstim"		Description = "2. Cue Microstim active" > </Var>
+		<Var Name = "Cue2MicroStimDelayMS" 			InitialValue = "75"		Type = "Numeric"	Panel = "Microstim"		Description = "2. Cue Delay to trigger (ms)" > </Var>
+		<Var Name = "ChoiceMicroStimActive" 		InitialValue = "0"		Type = "Boolean"	Panel = "Microstim"		Description = "Choice Microstim active" > </Var>
+		<Var Name = "ChoiceMicroStimDelayMS" 		InitialValue = "0"		Type = "Numeric"	Panel = "Microstim"		Description = "Choice Delay to trigger (ms)" > </Var>
+		<Var Name = "MicroStimAmplitude" 			InitialValue = "300"	Type = "Numeric"	Panel = "Microstim"		Description = "Current (uA)" > </Var>
+		<Var Name = "MicroStimPulseWidthMS" 		InitialValue = "0.25"	Type = "Numeric"	Panel = "Microstim"		Description = "Pulse width (ms)" > </Var>
+		<Var Name = "MicroStimBiPolar" 				InitialValue = "1"		Type = "Boolean"	Panel = "Microstim"		Description = "Biolar stimulation" > </Var>
+		<Var Name = "MicroStimSecondPulseWidthMS" 	InitialValue = "0.25"	Type = "Numeric"	Panel = "Microstim"		Description = "Pulse #2 width (ms)" > </Var>
+		<Var Name = "MicroStimBipolarDelayMS" 		InitialValue = "0.15"	Type = "Numeric"	Panel = "Microstim"		Description = "Bipolar delay (ms)" > </Var>
+		<Var Name = "MicroStimPulseRateHz" 			InitialValue = "300"	Type = "Numeric"	Panel = "Microstim"		Description = "Pulse Rate (Hz)" > </Var>
+		<Var Name = "MicroStimTrainRateHz" 			InitialValue = "1.0"	Type = "Numeric"	Panel = "Microstim"		Description = "Train Rate (Hz)" > </Var>
+		<Var Name = "MicroStimTrainDurationMS" 		InitialValue = "300"	Type = "Numeric"	Panel = "Microstim"		Description = "Train Duration (ms)" > </Var>
+	</GlobalVars>         
+	
+	<TrialTypes>
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Same_Exp1" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				   FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				   AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "objects;stretched_h100pct_w100pct" CueInvalidAttributes = "" 
+		CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+		FixationRegion = "FixationRegionPix" FixationPosition = "Center" MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+		Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = "" CueValidIgnoreAttributes = "stretched_h100pct_w100pct"   
+		CuePeriodMS = "LastCuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+		FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+		Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+				  InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "KeepCueOnScreen" 
+				  Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS" > </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+			   IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+		
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Diff_Exp1" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				   FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				   AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "objects;stretched_h100pct_w100pct" CueInvalidAttributes = "" 
+		CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" 
+		AbortTrialIfBreakFixation = "1"
+		Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "objects" CueInvalidAttributes = "CueAttributes(1)" CueIgnoreAttributes = "stretched_h100pct_w100pct"
+		CuePeriodMS = "LastCuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" 
+		AbortTrialIfBreakFixation = "1"
+		Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+				  InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "KeepCueOnScreen" 
+				  Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS"> </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+			   IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Same_Exp1_MS" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				   FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				   AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "objects;stretched_h100pct_w100pct" CueInvalidAttributes = "" 
+		CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+		FixationRegion = "FixationRegionPix" FixationPosition = "Center" MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+		Stimulation = "Cue1MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = "" CueValidIgnoreAttributes = "stretched_h100pct_w100pct"
+		CuePeriodMS = "LastCuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+		FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+		Stimulation = "Cue2MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+				  InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "KeepCueOnScreen" 
+				  Stimulation = "ChoiceMicroStimActive" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS" > </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+			   IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+		
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Diff_Exp1_MS" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				   FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				   AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "objects;stretched_h100pct_w100pct" CueInvalidAttributes = "" 
+		CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" 
+		AbortTrialIfBreakFixation = "1"
+		Stimulation = "Cue1MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "objects" CueInvalidAttributes = "CueAttributes(1)" CueIgnoreAttributes = "stretched_h100pct_w100pct"
+		CuePeriodMS = "LastCuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+		AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" 
+		AbortTrialIfBreakFixation = "1"
+		Stimulation = "Cue2MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+				  InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "KeepCueOnScreen" 
+				  Stimulation = "ChoiceMicroStimActive" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS"> </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+			   IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+	</TrialTypes>
+	
+	<TrialOrder>
+		<Block Name = "same_diff_cat_block_ct1"		Types = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1" NumTrials = "5" RepeatIncorrect = "1">  </Block>
+		<Block Name = "same_diff_cat_block_ct0"		Types = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1" NumTrials = "10" RepeatIncorrect = "0">  </Block>
+	</TrialOrder>       
+	
+	
+	<RealTimeStatistics> 
+		<Params
+			NumTrialsInCircularBuffer = "200"
+			PreTrialTimeSec = "0.5"
+			PostTrialTimeSec = "0.5"
+		> </Params>
+		
+		<Conditions>
+			<Condition Name = "All Correct Trials"     TrialTypes = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1"  TrialOutcome = "Correct" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Incorrect Trials"  TrialTypes = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1" TrialOutcome = "Incorrect" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Aborted Trials"     TrialTypes = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1"  TrialOutcome = "Aborted;BreakFixationDuringCue" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Timed Out Trials"  TrialTypes = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1" TrialOutcome = "Timeout" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Correct Same Trials"     TrialTypes = "IdentityMatching_Same_Exp1"  TrialOutcome = "Correct" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Incorrect Same Trials"  TrialTypes = "IdentityMatching_Same_Exp1" TrialOutcome = "Incorrect" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Correct Diff Trials"     TrialTypes = "IdentityMatching_Diff_Exp1"  TrialOutcome = "Correct" DefaultVisibility = "1"> </Condition>
+			<Condition Name = "All Incorrect Diff Trials"  TrialTypes = "IdentityMatching_Diff_Exp1" TrialOutcome = "Incorrect" DefaultVisibility = "1"> </Condition>
+			
+			<Condition Name = "MS: All Correct Trials"     TrialTypes = "IdentityMatching_Same_Exp1_MS;IdentityMatching_Diff_Exp1_MS"  TrialOutcome = "Correct" DefaultVisibility = "0"> </Condition>
+			<Condition Name = "MS: All Incorrect Trials"  TrialTypes = "IdentityMatching_Same_Exp1_MS;IdentityMatching_Diff_Exp1_MS" TrialOutcome = "Incorrect" DefaultVisibility = "0"> </Condition>
+			<Condition Name = "MS: All Correct Same Trials"     TrialTypes = "IdentityMatching_Same_Exp1_MS"  TrialOutcome = "Correct" DefaultVisibility = "0"> </Condition>
+			<Condition Name = "MS: All Incorrect Same Trials"  TrialTypes = "IdentityMatching_Same_Exp1_MS" TrialOutcome = "Incorrect" DefaultVisibility = "0"> </Condition>
+			<Condition Name = "MS: All Correct Diff Trials"     TrialTypes = "IdentityMatching_Diff_Exp1_MS"  TrialOutcome = "Correct" DefaultVisibility = "0"> </Condition>
+			<Condition Name = "MS: All Incorrect Diff Trials"  TrialTypes = "IdentityMatching_Diff_Exp1_MS" TrialOutcome = "Incorrect" DefaultVisibility = "0"> </Condition>
+			
+		</Conditions>
+	</RealTimeStatistics>    
+	
+	
+	<Media>
+		<Image Name = "GreenCheck" FileName = "\\KOFIKO-USER-23A\StimulusSet\23A_IdentityMatching\GreenCheck.png" Attr = ""> </Image>
+		<Image Name = "RedCross" FileName = "\\KOFIKO-USER-23A\StimulusSet\23A_IdentityMatching\RedCross.png" Attr = ""> </Image>
+		
+		<Image Name = "ID-IMG_0675_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_MRI_adapter_CIT_familiar_objects-none-ORI_A-99999999-IMG_0675.jpg" Attr = "objects;ID_IMG_0675;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0703_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_MRI_handbox_CIT_familiar_objects-none-ORI_A-99999999-IMG_0703.jpg" Attr = "objects;ID_IMG_0703;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0753_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_anti_escape_device_CIT_familiar_objects-none-ORI_A-99999999-IMG_0753.jpg" Attr = "objects;ID_IMG_0753;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0696_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_banana_chips_CIT_familiar_objects-none-ORI_A-99999999-IMG_0696.jpg" Attr = "objects;ID_IMG_0696;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0748_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_biscuits_CIT_familiar_objects-none-ORI_A-99999999-IMG_0748.jpg" Attr = "objects;ID_IMG_0748;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0767_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_blue_food_toy_CIT_familiar_objects-none-ORI_A-99999999-IMG_0767.jpg" Attr = "objects;ID_IMG_0767;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0701_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_dried_apricots_CIT_familiar_objects-none-ORI_A-99999999-IMG_0701.jpg" Attr = "objects;ID_IMG_0701;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0778_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_food_bowl_CIT_familiar_objects-none-ORI_A-99999999-IMG_0778.jpg" Attr = "objects;ID_IMG_0778;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0756_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_food_box_CIT_familiar_objects-none-ORI_A-99999999-IMG_0756.jpg" Attr = "objects;ID_IMG_0756;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0793_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_food_grid_board_CIT_familiar_objects-none-ORI_A-99999999-IMG_0793.jpg" Attr = "objects;ID_IMG_0793;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0796_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_hifi_CIT_familiar_objects-none-ORI_A-99999999-IMG_0796.jpg" Attr = "objects;ID_IMG_0796;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0768_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_mirror_CIT_familiar_objects-none-ORI_A-99999999-IMG_0768.jpg" Attr = "objects;ID_IMG_0768;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0709_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_nutty_buddies_CIT_familiar_objects-none-ORI_A-99999999-IMG_0709.jpg" Attr = "objects;ID_IMG_0709;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0782_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_orange_food_ball_CIT_familiar_objects-none-ORI_A-99999999-IMG_0782.jpg" Attr = "objects;ID_IMG_0782;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0777_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_plastic_chain_CIT_familiar_objects-none-ORI_A-99999999-IMG_0777.jpg" Attr = "objects;ID_IMG_0777;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0789_ORI-A99999999_TRF-stretched_h100pct_w010pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w010pct.ID_wood_log_CIT_familiar_objects-none-ORI_A-99999999-IMG_0789.jpg" Attr = "objects;ID_IMG_0789;stretched_h100pct_w010pct"> </Image>
+		<Image Name = "ID-IMG_0675_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_MRI_adapter_CIT_familiar_objects-none-ORI_A-99999999-IMG_0675.jpg" Attr = "objects;ID_IMG_0675;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0703_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_MRI_handbox_CIT_familiar_objects-none-ORI_A-99999999-IMG_0703.jpg" Attr = "objects;ID_IMG_0703;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0753_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_anti_escape_device_CIT_familiar_objects-none-ORI_A-99999999-IMG_0753.jpg" Attr = "objects;ID_IMG_0753;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0696_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_banana_chips_CIT_familiar_objects-none-ORI_A-99999999-IMG_0696.jpg" Attr = "objects;ID_IMG_0696;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0748_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_biscuits_CIT_familiar_objects-none-ORI_A-99999999-IMG_0748.jpg" Attr = "objects;ID_IMG_0748;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0767_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_blue_food_toy_CIT_familiar_objects-none-ORI_A-99999999-IMG_0767.jpg" Attr = "objects;ID_IMG_0767;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0701_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_dried_apricots_CIT_familiar_objects-none-ORI_A-99999999-IMG_0701.jpg" Attr = "objects;ID_IMG_0701;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0778_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_food_bowl_CIT_familiar_objects-none-ORI_A-99999999-IMG_0778.jpg" Attr = "objects;ID_IMG_0778;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0756_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_food_box_CIT_familiar_objects-none-ORI_A-99999999-IMG_0756.jpg" Attr = "objects;ID_IMG_0756;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0793_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_food_grid_board_CIT_familiar_objects-none-ORI_A-99999999-IMG_0793.jpg" Attr = "objects;ID_IMG_0793;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0796_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_hifi_CIT_familiar_objects-none-ORI_A-99999999-IMG_0796.jpg" Attr = "objects;ID_IMG_0796;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0768_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_mirror_CIT_familiar_objects-none-ORI_A-99999999-IMG_0768.jpg" Attr = "objects;ID_IMG_0768;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0709_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_nutty_buddies_CIT_familiar_objects-none-ORI_A-99999999-IMG_0709.jpg" Attr = "objects;ID_IMG_0709;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0782_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_orange_food_ball_CIT_familiar_objects-none-ORI_A-99999999-IMG_0782.jpg" Attr = "objects;ID_IMG_0782;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0777_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_plastic_chain_CIT_familiar_objects-none-ORI_A-99999999-IMG_0777.jpg" Attr = "objects;ID_IMG_0777;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0789_ORI-A99999999_TRF-stretched_h100pct_w030pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w030pct.ID_wood_log_CIT_familiar_objects-none-ORI_A-99999999-IMG_0789.jpg" Attr = "objects;ID_IMG_0789;stretched_h100pct_w030pct"> </Image>
+		<Image Name = "ID-IMG_0675_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_MRI_adapter_CIT_familiar_objects-none-ORI_A-99999999-IMG_0675.jpg" Attr = "objects;ID_IMG_0675;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0703_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_MRI_handbox_CIT_familiar_objects-none-ORI_A-99999999-IMG_0703.jpg" Attr = "objects;ID_IMG_0703;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0753_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_anti_escape_device_CIT_familiar_objects-none-ORI_A-99999999-IMG_0753.jpg" Attr = "objects;ID_IMG_0753;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0696_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_banana_chips_CIT_familiar_objects-none-ORI_A-99999999-IMG_0696.jpg" Attr = "objects;ID_IMG_0696;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0748_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_biscuits_CIT_familiar_objects-none-ORI_A-99999999-IMG_0748.jpg" Attr = "objects;ID_IMG_0748;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0767_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_blue_food_toy_CIT_familiar_objects-none-ORI_A-99999999-IMG_0767.jpg" Attr = "objects;ID_IMG_0767;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0701_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_dried_apricots_CIT_familiar_objects-none-ORI_A-99999999-IMG_0701.jpg" Attr = "objects;ID_IMG_0701;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0778_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_food_bowl_CIT_familiar_objects-none-ORI_A-99999999-IMG_0778.jpg" Attr = "objects;ID_IMG_0778;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0756_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_food_box_CIT_familiar_objects-none-ORI_A-99999999-IMG_0756.jpg" Attr = "objects;ID_IMG_0756;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0793_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_food_grid_board_CIT_familiar_objects-none-ORI_A-99999999-IMG_0793.jpg" Attr = "objects;ID_IMG_0793;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0796_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_hifi_CIT_familiar_objects-none-ORI_A-99999999-IMG_0796.jpg" Attr = "objects;ID_IMG_0796;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0768_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_mirror_CIT_familiar_objects-none-ORI_A-99999999-IMG_0768.jpg" Attr = "objects;ID_IMG_0768;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0709_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_nutty_buddies_CIT_familiar_objects-none-ORI_A-99999999-IMG_0709.jpg" Attr = "objects;ID_IMG_0709;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0782_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_orange_food_ball_CIT_familiar_objects-none-ORI_A-99999999-IMG_0782.jpg" Attr = "objects;ID_IMG_0782;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0777_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_plastic_chain_CIT_familiar_objects-none-ORI_A-99999999-IMG_0777.jpg" Attr = "objects;ID_IMG_0777;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0789_ORI-A99999999_TRF-stretched_h100pct_w060pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w060pct.ID_wood_log_CIT_familiar_objects-none-ORI_A-99999999-IMG_0789.jpg" Attr = "objects;ID_IMG_0789;stretched_h100pct_w060pct"> </Image>
+		<Image Name = "ID-IMG_0675_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_MRI_adapter_CIT_familiar_objects-none-ORI_A-99999999-IMG_0675.jpg" Attr = "objects;ID_IMG_0675;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0703_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_MRI_handbox_CIT_familiar_objects-none-ORI_A-99999999-IMG_0703.jpg" Attr = "objects;ID_IMG_0703;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0753_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_anti_escape_device_CIT_familiar_objects-none-ORI_A-99999999-IMG_0753.jpg" Attr = "objects;ID_IMG_0753;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0696_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_banana_chips_CIT_familiar_objects-none-ORI_A-99999999-IMG_0696.jpg" Attr = "objects;ID_IMG_0696;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0748_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_biscuits_CIT_familiar_objects-none-ORI_A-99999999-IMG_0748.jpg" Attr = "objects;ID_IMG_0748;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0767_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_blue_food_toy_CIT_familiar_objects-none-ORI_A-99999999-IMG_0767.jpg" Attr = "objects;ID_IMG_0767;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0701_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_dried_apricots_CIT_familiar_objects-none-ORI_A-99999999-IMG_0701.jpg" Attr = "objects;ID_IMG_0701;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0778_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_food_bowl_CIT_familiar_objects-none-ORI_A-99999999-IMG_0778.jpg" Attr = "objects;ID_IMG_0778;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0756_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_food_box_CIT_familiar_objects-none-ORI_A-99999999-IMG_0756.jpg" Attr = "objects;ID_IMG_0756;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0793_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_food_grid_board_CIT_familiar_objects-none-ORI_A-99999999-IMG_0793.jpg" Attr = "objects;ID_IMG_0793;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0796_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_hifi_CIT_familiar_objects-none-ORI_A-99999999-IMG_0796.jpg" Attr = "objects;ID_IMG_0796;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0768_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_mirror_CIT_familiar_objects-none-ORI_A-99999999-IMG_0768.jpg" Attr = "objects;ID_IMG_0768;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0709_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_nutty_buddies_CIT_familiar_objects-none-ORI_A-99999999-IMG_0709.jpg" Attr = "objects;ID_IMG_0709;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0782_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_orange_food_ball_CIT_familiar_objects-none-ORI_A-99999999-IMG_0782.jpg" Attr = "objects;ID_IMG_0782;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0777_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_plastic_chain_CIT_familiar_objects-none-ORI_A-99999999-IMG_0777.jpg" Attr = "objects;ID_IMG_0777;stretched_h100pct_w100pct"> </Image>
+		<Image Name = "ID-IMG_0789_ORI-A99999999_TRF-stretched_h100pct_w100pct" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02_stretched\stretched\stretched_h100pct_w100pct.ID_wood_log_CIT_familiar_objects-none-ORI_A-99999999-IMG_0789.jpg" Attr = "objects;ID_IMG_0789;stretched_h100pct_w100pct"> </Image>
+	</Media>
+	
+	
+</Config>
+

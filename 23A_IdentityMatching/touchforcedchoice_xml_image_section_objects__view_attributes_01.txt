@@ -1,0 +1,10 @@
+ <Media>
+ <Image Name = "ID-IMG_0675_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MRI_adapter_CIT_familiar_objects-none-ORI_A-99999999-IMG_0675.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0703_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MRI_handbox_CIT_familiar_objects-none-ORI_A-99999999-IMG_0703.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0753_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_anti_escape_device_CIT_familiar_objects-none-ORI_A-99999999-IMG_0753.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0696_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_banana_chips_CIT_familiar_objects-none-ORI_A-99999999-IMG_0696.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0748_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_biscuits_CIT_familiar_objects-none-ORI_A-99999999-IMG_0748.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0701_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_dried_apricots_CIT_familiar_objects-none-ORI_A-99999999-IMG_0701.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0756_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_food_box_CIT_familiar_objects-none-ORI_A-99999999-IMG_0756.jpg" Attr = "objects;AZI_99999999"> </Image>
+ <Image Name = "ID-IMG_0709_ORI-A99999999_TRF-none" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_nutty_buddies_CIT_familiar_objects-none-ORI_A-99999999-IMG_0709.jpg" Attr = "objects;AZI_99999999"> </Image>
+ </Media>

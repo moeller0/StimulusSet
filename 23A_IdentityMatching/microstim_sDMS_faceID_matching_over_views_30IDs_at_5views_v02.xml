@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+	
+	<GlobalVars>
+		<Var Name = "JuiceTimeMS" 					InitialValue = "50" 	Type = "Numeric" 	Panel = "Reward"		Description = "Juice time  (ms)" > </Var>
+		<Var Name = "FixationRegionPix"				InitialValue = "150" 	Type = "Numeric" 	Panel = "Reward"		Description = "Fixation region (pix)" > </Var>
+		<Var Name = "ResponseRegionPix"				InitialValue = "150" 	Type = "Numeric" 	Panel = "Reward"		Description = "Response region (pix)" > </Var>
+		
+		<Var Name = "TrialTimeoutMS" 				InitialValue = "3000" 	Type = "Numeric" 	Panel = "Timing"		Description = "Trial timeout (ms)" > </Var>
+		<Var Name = "DelayBeforeCueMS" 				InitialValue = "1000" 	Type = "Numeric" 	Panel = "Timing"		Description = "Fixate before Cue(ms)" > </Var>   
+		<Var Name = "CuePeriodMS" 					InitialValue = "500" 	Type = "Numeric" 	Panel = "Timing"		Description = "Cue period (ms)" > </Var>
+		<Var Name = "InterCueDelayMS" 				InitialValue = "200" 	Type = "Numeric" 	Panel = "Timing"		Description = "Inter Cue Memory period (ms)" > </Var>
+		<Var Name = "PreChoiceDelayMS" 				InitialValue = "0"		Type = "Numeric" 	Panel = "Timing"		Description = "Pre-Choice period (ms)" > </Var>
+		<Var Name = "FalseResponseTimeOutMS"		InitialValue = "3000" 	Type = "Numeric" 	Panel = "Timing"		Description = "False response timeout (ms)" > </Var>
+		<Var Name = "HoldToSelectChoiceMS"			InitialValue = "50" 	Type = "Numeric" 	Panel = "Timing"		Description = "required fixation on choice (ms)" > </Var>
+
+		
+		<Var Name = "PreCueFixationSpotSizePix" 	InitialValue = "19"		Type = "Numeric" 	Panel = "Stimuli"		Description = "PreCue Fixaiton size (pix)" > </Var>
+		<Var Name = "FixationSpotSizePix" 			InitialValue = "10"		Type = "Numeric" 	Panel = "Stimuli"		Description = "Fixaiton size (pix)" > </Var>
+		<Var Name = "CueSizePix" 					InitialValue = "125" 	Type = "Numeric" 	Panel = "Stimuli"		Description = "Cue size (pix)" > </Var>
+		<Var Name = "ChoiceSizePix" 				InitialValue = "150" 	Type = "Numeric" 	Panel = "Stimuli"		Description = "Choice size (pix)" > </Var>
+		
+		<Var Name = "Cue1MicroStimActive" 			InitialValue = "1"		Type = "Boolean"	Panel = "Microstim"		Description = "1. Cue Microstim active" > </Var>
+		<Var Name = "Cue1MicroStimDelayMS" 			InitialValue = "75"		Type = "Numeric"	Panel = "Microstim"		Description = "1. Cue Delay to trigger (ms)" > </Var>
+		<Var Name = "Cue2MicroStimActive" 			InitialValue = "1"		Type = "Boolean"	Panel = "Microstim"		Description = "2. Cue Microstim active" > </Var>
+		<Var Name = "Cue2MicroStimDelayMS" 			InitialValue = "75"		Type = "Numeric"	Panel = "Microstim"		Description = "2. Cue Delay to trigger (ms)" > </Var>
+		<Var Name = "ChoiceMicroStimActive" 		InitialValue = "0"		Type = "Boolean"	Panel = "Microstim"		Description = "Choice Microstim active" > </Var>
+		<Var Name = "ChoiceMicroStimDelayMS" 		InitialValue = "0"		Type = "Numeric"	Panel = "Microstim"		Description = "Choice Delay to trigger (ms)" > </Var>
+		<Var Name = "MicroStimAmplitude" 			InitialValue = "300"	Type = "Numeric"	Panel = "Microstim"		Description = "Current (uA)" > </Var>
+		<Var Name = "MicroStimPulseWidthMS" 		InitialValue = "0.25"	Type = "Numeric"	Panel = "Microstim"		Description = "Pulse width (ms)" > </Var>
+		<Var Name = "MicroStimBiPolar" 				InitialValue = "1"		Type = "Boolean"	Panel = "Microstim"		Description = "Biolar stimulation" > </Var>
+		<Var Name = "MicroStimSecondPulseWidthMS" 	InitialValue = "0.25"	Type = "Numeric"	Panel = "Microstim"		Description = "Pulse #2 width (ms)" > </Var>
+		<Var Name = "MicroStimBipolarDelayMS" 		InitialValue = "0.15"	Type = "Numeric"	Panel = "Microstim"		Description = "Bipolar delay (ms)" > </Var>
+		<Var Name = "MicroStimPulseRateHz" 			InitialValue = "300"	Type = "Numeric"	Panel = "Microstim"		Description = "Pulse Rate (Hz)" > </Var>
+		<Var Name = "MicroStimTrainRateHz" 			InitialValue = "1.0"	Type = "Numeric"	Panel = "Microstim"		Description = "Train Rate (Hz)" > </Var>
+		<Var Name = "MicroStimTrainDurationMS" 		InitialValue = "300"	Type = "Numeric"	Panel = "Microstim"		Description = "Train Duration (ms)" > </Var>
+	</GlobalVars>         
+	
+	<TrialTypes>
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Same_Exp1" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "ID_match_v01" CueInvalidAttributes = "" 
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+				FixationRegion = "FixationRegionPix" FixationPosition = "Center" MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+				Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = ""  
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+				FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+				Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+					InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "0" 
+					Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS" > </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+				IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+		
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Diff_Exp1" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "ID_match_v01" CueInvalidAttributes = "" 
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" 
+				AbortTrialIfBreakFixation = "1"
+				Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "ID_match_v01" CueInvalidAttributes = "CueAttributes(1)"  
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" 
+				AbortTrialIfBreakFixation = "1"
+				Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+					InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "0" 
+					Stimulation = "0" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS"> </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+				IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Same_Exp1_MS" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "ID_match_v01" CueInvalidAttributes = "" 
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+				FixationRegion = "FixationRegionPix" FixationPosition = "Center" MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+				Stimulation = "Cue1MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "CueAttributes(1)" CueInvalidAttributes = ""  
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1"  FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" 
+				FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" AbortTrialIfBreakFixation = "1"
+				Stimulation = "Cue2MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+					InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "0" 
+					Stimulation = "ChoiceMicroStimActive" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS" > </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+				IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+		
+		
+		<Trial>
+			<TrialParams Name = "IdentityMatching_Diff_Exp1_MS" CueType = "Random" ChoicesType = "Fixed" ProbWeight = "1" MultipleSaccades = "0" 
+				TrialTimeoutMS = "TrialTimeoutMS" > </TrialParams>
+			<PreCueFixation BackgroundColor = "128 128 128" PreCueFixationPeriodMS = "DelayBeforeCueMS" FixationSpotSize = "PreCueFixationSpotSizePix" 
+				FixationSpotType = "Triangle" FixationRegion = "FixationRegionPix" FixationPosition = "Center" FixationColor = "255 0 0"  
+				AbortTrialIfTouchOutsideCue = "1" RewardTouchCue = "0" >  </PreCueFixation>            
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "ID_match_v01" CueInvalidAttributes = "" 
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "255 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "InterCueDelayMS"  ShowFixationSpot = "1" 
+				AbortTrialIfBreakFixation = "1"
+				Stimulation = "Cue1MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue1MicroStimDelayMS" >  </Cue>
+			<Cue BackgroundColor = "128 128 128" CueMedia = "Random" CueValidAttributes = "ID_match_v01" CueInvalidAttributes = "CueAttributes(1)"  
+				CuePeriodMS = "CuePeriodMS" CueNoiseLevel = "0" CueSizePix = "CueSizePix" CuePosition = "0 0" CueHighlight = "0" CueHighlightColor = "0 0 0"  
+				AbortTrialIfBreakFixationDuringCue  = "1" OverlayFixation = "1" FixationSpotSize = "FixationSpotSizePix" FixationSpotType = "Disc" FixationRegion = "FixationRegionPix" FixationPosition = "Center"  MemoryPeriodMS = "PreChoiceDelayMS"  ShowFixationSpot = "1" 
+				AbortTrialIfBreakFixation = "1"
+				Stimulation = "Cue2MicroStimActive" StimChannels = "1" MicroStimDelayMS = "Cue2MicroStimDelayMS" >  </Cue>
+			<MemoryPeriod BackgroundColor = "128 128 128" MemoryPeriodMS = "0"  ShowFixationSpot = "0" AbortTrialIfBreakFixation = "0" > </MemoryPeriod>
+			<Choices>
+				<ChoicesParam BackgroundColor = "128 128 128" HoldToSelectChoiceMS = "HoldToSelectChoiceMS" MultipleAttemptsUntilJuice = "0" InsideChoiceRegionType = "Rect" 
+					InsideChoiceRegionSize = "ResponseRegionPix" KeepCueOnScreen = "0" 
+					Stimulation = "ChoiceMicroStimActive" StimChannels = "1" MicroStimDelayMS = "ChoiceMicroStimDelayMS"> </ChoicesParam>                    
+				<Choice Media ="GreenCheck" Position = "313 0" JuiceReward = "0" SizePix = "ChoiceSizePix" > </Choice>
+				<Choice Media ="RedCross"  Position = "-313 0" JuiceReward = "1" SizePix = "ChoiceSizePix" > </Choice>                 
+			</Choices>
+			<PostChoice DefaultJuiceRewardMS = "JuiceTimeMS" InterTrialIntervalMinSec = "0" InterTrialIntervalMaxSec = "1" 
+				IncorrectTrialPunishmentDelayMS = "FalseResponseTimeOutMS" ExtinguishNonSelectedChoicesAfterChoice = "1" RetainSelectedChoicePeriodMS = "500"> </PostChoice>
+		</Trial>               
+	</TrialTypes>
+		
+	<TrialOrder>
+		<Block Name = "same_diff_cat_block_ct0"		Types = "IdentityMatching_Same_Exp1;IdentityMatching_Diff_Exp1" NumTrials = "5" RepeatIncorrect = "0">  </Block>
+		<Block Name = "same_diff_cat_block_ct0_ms"	Types = "IdentityMatching_Same_Exp1_MS;IdentityMatching_Diff_Exp1_MS" NumTrials = "5" RepeatIncorrect = "0">  </Block>
+	</TrialOrder>       
+	
+	<Media>
+		<Image Name = "GreenCheck" FileName = "\\KOFIKO-USER-23A\StimulusSet\23A_IdentityMatching\GreenCheck.png" Attr = ""> </Image>
+		<Image Name = "RedCross" FileName = "\\KOFIKO-USER-23A\StimulusSet\23A_IdentityMatching\RedCross.png" Attr = ""> </Image>
+				
+		<Image Name = "ID-BJ_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BJ_CIT_familiar_faces-homo_sapiens-ORI_A-45-BJ_A-45_E00.jpg" Attr = "ID_match_v01;ID_BJ"> </Image>
+		<Image Name = "ID-BJ_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BJ_CIT_familiar_faces-homo_sapiens-ORI_A-90-BJ_A-90_E00.jpg" Attr = "ID_match_v01;ID_BJ"> </Image>
+		<Image Name = "ID-BJ_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BJ_CIT_familiar_faces-homo_sapiens-ORI_A000-BJ_A00_E00.jpg" Attr = "ID_match_v01;ID_BJ"> </Image>
+		<Image Name = "ID-BJ_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BJ_CIT_familiar_faces-homo_sapiens-ORI_A045-BJ_A45_E00.jpg" Attr = "ID_match_v01;ID_BJ"> </Image>
+		<Image Name = "ID-BJ_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BJ_CIT_familiar_faces-homo_sapiens-ORI_A090-BJ_A90_E00.jpg" Attr = "ID_match_v01;ID_BJ"> </Image>
+		<Image Name = "ID-BR_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A-45-BR_A-45_E00.jpg" Attr = "ID_match_v01;ID_BR"> </Image>
+		<Image Name = "ID-BR_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A-90-BR_A-90_E00.jpg" Attr = "ID_match_v01;ID_BR"> </Image>
+		<Image Name = "ID-BR_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A000-BR_A00_E00.jpg" Attr = "ID_match_v01;ID_BR"> </Image>
+		<Image Name = "ID-BR_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A045-BR_A45_E00.jpg" Attr = "ID_match_v01;ID_BR"> </Image>
+		<Image Name = "ID-BR_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A090-BR_A90_E00.jpg" Attr = "ID_match_v01;ID_BR"> </Image>
+		<Image Name = "ID-BT_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A-45-BT_A-45_E00.jpg" Attr = "ID_match_v01;ID_BT"> </Image>
+		<Image Name = "ID-BT_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A-90-BT_A-90_E00.jpg" Attr = "ID_match_v01;ID_BT"> </Image>
+		<Image Name = "ID-BT_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A000-BT_A00_E00.jpg" Attr = "ID_match_v01;ID_BT"> </Image>
+		<Image Name = "ID-BT_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A045-BT_A45_E00.jpg" Attr = "ID_match_v01;ID_BT"> </Image>
+		<Image Name = "ID-BT_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A090-BT_A90_E00.jpg" Attr = "ID_match_v01;ID_BT"> </Image>
+		<Image Name = "ID-GP_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_GP_CIT_familiar_faces-homo_sapiens-ORI_A-45-GP_A-45_E00.jpg" Attr = "ID_match_v01;ID_GP"> </Image>
+		<Image Name = "ID-GP_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_GP_CIT_familiar_faces-homo_sapiens-ORI_A-90-GP_A-90_E00.jpg" Attr = "ID_match_v01;ID_GP"> </Image>
+		<Image Name = "ID-GP_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_GP_CIT_familiar_faces-homo_sapiens-ORI_A000-GP_A00_E00.jpg" Attr = "ID_match_v01;ID_GP"> </Image>
+		<Image Name = "ID-GP_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_GP_CIT_familiar_faces-homo_sapiens-ORI_A045-GP_A45_E00.jpg" Attr = "ID_match_v01;ID_GP"> </Image>
+		<Image Name = "ID-GP_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_GP_CIT_familiar_faces-homo_sapiens-ORI_A090-GP_A90_E00.jpg" Attr = "ID_match_v01;ID_GP"> </Image>
+		<Image Name = "ID-JT_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_JT_CIT_familiar_faces-homo_sapiens-ORI_A-45-JT_A-45_E00.jpg" Attr = "ID_match_v01;ID_JT"> </Image>
+		<Image Name = "ID-JT_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_JT_CIT_familiar_faces-homo_sapiens-ORI_A-90-JT_A-90_E00.jpg" Attr = "ID_match_v01;ID_JT"> </Image>
+		<Image Name = "ID-JT_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_JT_CIT_familiar_faces-homo_sapiens-ORI_A000-JT_A00_E00.jpg" Attr = "ID_match_v01;ID_JT"> </Image>
+		<Image Name = "ID-JT_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_JT_CIT_familiar_faces-homo_sapiens-ORI_A045-JT_A45_E00.jpg" Attr = "ID_match_v01;ID_JT"> </Image>
+		<Image Name = "ID-JT_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_JT_CIT_familiar_faces-homo_sapiens-ORI_A090-JT_A90_E00.jpg" Attr = "ID_match_v01;ID_JT"> </Image>
+		<Image Name = "ID-KI_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KI_CIT_familiar_faces-homo_sapiens-ORI_A-45-KI_A-45_E00.jpg" Attr = "ID_match_v01;ID_KI"> </Image>
+		<Image Name = "ID-KI_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KI_CIT_familiar_faces-homo_sapiens-ORI_A-90-KI_A-90_E00.jpg" Attr = "ID_match_v01;ID_KI"> </Image>
+		<Image Name = "ID-KI_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KI_CIT_familiar_faces-homo_sapiens-ORI_A000-KI_A00_E00.jpg" Attr = "ID_match_v01;ID_KI"> </Image>
+		<Image Name = "ID-KI_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KI_CIT_familiar_faces-homo_sapiens-ORI_A045-KI_A45_E00.jpg" Attr = "ID_match_v01;ID_KI"> </Image>
+		<Image Name = "ID-KI_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KI_CIT_familiar_faces-homo_sapiens-ORI_A090-KI_A90_E00.jpg" Attr = "ID_match_v01;ID_KI"> </Image>
+		<Image Name = "ID-KS_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KS_CIT_familiar_faces-homo_sapiens-ORI_A-45-KS_A-45_E00.jpg" Attr = "ID_match_v01;ID_KS"> </Image>
+		<Image Name = "ID-KS_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KS_CIT_familiar_faces-homo_sapiens-ORI_A-90-KS_A-90_E00.jpg" Attr = "ID_match_v01;ID_KS"> </Image>
+		<Image Name = "ID-KS_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KS_CIT_familiar_faces-homo_sapiens-ORI_A000-KS_A00_E00.jpg" Attr = "ID_match_v01;ID_KS"> </Image>
+		<Image Name = "ID-KS_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KS_CIT_familiar_faces-homo_sapiens-ORI_A045-KS_A45_E00.jpg" Attr = "ID_match_v01;ID_KS"> </Image>
+		<Image Name = "ID-KS_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_KS_CIT_familiar_faces-homo_sapiens-ORI_A090-KS_A90_E00.jpg" Attr = "ID_match_v01;ID_KS"> </Image>
+		<Image Name = "ID-LK_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LK_CIT_familiar_faces-homo_sapiens-ORI_A-45-LK_A-45_E00.jpg" Attr = "ID_match_v01;ID_LK"> </Image>
+		<Image Name = "ID-LK_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LK_CIT_familiar_faces-homo_sapiens-ORI_A-90-LK_A-90_E00.jpg" Attr = "ID_match_v01;ID_LK"> </Image>
+		<Image Name = "ID-LK_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LK_CIT_familiar_faces-homo_sapiens-ORI_A000-LK_A00_E00.jpg" Attr = "ID_match_v01;ID_LK"> </Image>
+		<Image Name = "ID-LK_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LK_CIT_familiar_faces-homo_sapiens-ORI_A045-LK_A45_E00.jpg" Attr = "ID_match_v01;ID_LK"> </Image>
+		<Image Name = "ID-LK_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LK_CIT_familiar_faces-homo_sapiens-ORI_A090-LK_A90_E00.jpg" Attr = "ID_match_v01;ID_LK"> </Image>
+		<Image Name = "ID-LZ_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LZ_CIT_familiar_faces-homo_sapiens-ORI_A-45-LZ_A-45_E00.jpg" Attr = "ID_match_v01;ID_LZ"> </Image>
+		<Image Name = "ID-LZ_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LZ_CIT_familiar_faces-homo_sapiens-ORI_A-90-LZ_A-90_E00.jpg" Attr = "ID_match_v01;ID_LZ"> </Image>
+		<Image Name = "ID-LZ_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LZ_CIT_familiar_faces-homo_sapiens-ORI_A000-LZ_A00_E00.jpg" Attr = "ID_match_v01;ID_LZ"> </Image>
+		<Image Name = "ID-LZ_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LZ_CIT_familiar_faces-homo_sapiens-ORI_A045-LZ_A45_E00.jpg" Attr = "ID_match_v01;ID_LZ"> </Image>
+		<Image Name = "ID-LZ_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_LZ_CIT_familiar_faces-homo_sapiens-ORI_A090-LZ_A90_E00.jpg" Attr = "ID_match_v01;ID_LZ"> </Image>
+		<Image Name = "ID-ME_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_ME_CIT_familiar_faces-homo_sapiens-ORI_A-45-ME_A-45_E00.jpg" Attr = "ID_match_v01;ID_ME"> </Image>
+		<Image Name = "ID-ME_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_ME_CIT_familiar_faces-homo_sapiens-ORI_A-90-ME_A-90_E00.jpg" Attr = "ID_match_v01;ID_ME"> </Image>
+		<Image Name = "ID-ME_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_ME_CIT_familiar_faces-homo_sapiens-ORI_A000-ME_A00_E00.jpg" Attr = "ID_match_v01;ID_ME"> </Image>
+		<Image Name = "ID-ME_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_ME_CIT_familiar_faces-homo_sapiens-ORI_A045-ME_A45_E00.jpg" Attr = "ID_match_v01;ID_ME"> </Image>
+		<Image Name = "ID-ME_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_ME_CIT_familiar_faces-homo_sapiens-ORI_A090-ME_A90_E00.jpg" Attr = "ID_match_v01;ID_ME"> </Image>
+		<Image Name = "ID-MS_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MS_CIT_familiar_faces-homo_sapiens-ORI_A-45-MS_A-45_E00.jpg" Attr = "ID_match_v01;ID_MS"> </Image>
+		<Image Name = "ID-MS_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MS_CIT_familiar_faces-homo_sapiens-ORI_A-90-MS_A-90_E00.jpg" Attr = "ID_match_v01;ID_MS"> </Image>
+		<Image Name = "ID-MS_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MS_CIT_familiar_faces-homo_sapiens-ORI_A000-MS_A00_E00.jpg" Attr = "ID_match_v01;ID_MS"> </Image>
+		<Image Name = "ID-MS_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MS_CIT_familiar_faces-homo_sapiens-ORI_A045-MS_A45_E00.jpg" Attr = "ID_match_v01;ID_MS"> </Image>
+		<Image Name = "ID-MS_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_MS_CIT_familiar_faces-homo_sapiens-ORI_A090-MS_A90_E00.jpg" Attr = "ID_match_v01;ID_MS"> </Image>
+		<Image Name = "ID-OS_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_OS_CIT_familiar_faces-homo_sapiens-ORI_A-45-OS_A-45_E00.jpg" Attr = "ID_match_v01;ID_OS"> </Image>
+		<Image Name = "ID-OS_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_OS_CIT_familiar_faces-homo_sapiens-ORI_A-90-OS_A-90_E00.jpg" Attr = "ID_match_v01;ID_OS"> </Image>
+		<Image Name = "ID-OS_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_OS_CIT_familiar_faces-homo_sapiens-ORI_A000-OS_A00_E00.jpg" Attr = "ID_match_v01;ID_OS"> </Image>
+		<Image Name = "ID-OS_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_OS_CIT_familiar_faces-homo_sapiens-ORI_A045-OS_A45_E00.jpg" Attr = "ID_match_v01;ID_OS"> </Image>
+		<Image Name = "ID-OS_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_OS_CIT_familiar_faces-homo_sapiens-ORI_A090-OS_A90_E00.jpg" Attr = "ID_match_v01;ID_OS"> </Image>
+		<Image Name = "ID-SN_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A-45-SN_A-45_E00.jpg" Attr = "ID_match_v01;ID_SN"> </Image>
+		<Image Name = "ID-SN_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A-90-SN_A-90_E00.jpg" Attr = "ID_match_v01;ID_SN"> </Image>
+		<Image Name = "ID-SN_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A000-SN_A00_E00.jpg" Attr = "ID_match_v01;ID_SN"> </Image>
+		<Image Name = "ID-SN_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A045-SN_A45_E00.jpg" Attr = "ID_match_v01;ID_SN"> </Image>
+		<Image Name = "ID-SN_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A090-SN_A90_E00.jpg" Attr = "ID_match_v01;ID_SN"> </Image>
+		<Image Name = "ID-TD_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_TD_CIT_familiar_faces-homo_sapiens-ORI_A-45-TD_A-45_E00.jpg" Attr = "ID_match_v01;ID_TD"> </Image>
+		<Image Name = "ID-TD_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_TD_CIT_familiar_faces-homo_sapiens-ORI_A-90-TD_A-90_E00.jpg" Attr = "ID_match_v01;ID_TD"> </Image>
+		<Image Name = "ID-TD_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_TD_CIT_familiar_faces-homo_sapiens-ORI_A000-TD_A00_E00.jpg" Attr = "ID_match_v01;ID_TD"> </Image>
+		<Image Name = "ID-TD_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_TD_CIT_familiar_faces-homo_sapiens-ORI_A045-TD_A45_E00.jpg" Attr = "ID_match_v01;ID_TD"> </Image>
+		<Image Name = "ID-TD_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_TD_CIT_familiar_faces-homo_sapiens-ORI_A090-TD_A90_E00.jpg" Attr = "ID_match_v01;ID_TD"> </Image>
+		<Image Name = "ID-UA_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_UA_CIT_familiar_faces-homo_sapiens-ORI_A-45-UA_A-45_E00.jpg" Attr = "ID_match_v01;ID_UA"> </Image>
+		<Image Name = "ID-UA_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_UA_CIT_familiar_faces-homo_sapiens-ORI_A-90-UA_A-90_E00.jpg" Attr = "ID_match_v01;ID_UA"> </Image>
+		<Image Name = "ID-UA_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_UA_CIT_familiar_faces-homo_sapiens-ORI_A000-UA_A00_E00.jpg" Attr = "ID_match_v01;ID_UA"> </Image>
+		<Image Name = "ID-UA_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_UA_CIT_familiar_faces-homo_sapiens-ORI_A045-UA_A45_E00.jpg" Attr = "ID_match_v01;ID_UA"> </Image>
+		<Image Name = "ID-UA_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_UA_CIT_familiar_faces-homo_sapiens-ORI_A090-UA_A90_E00.jpg" Attr = "ID_match_v01;ID_UA"> </Image>
+		<Image Name = "ID-WM_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A-45-WM_A-45_E00.jpg" Attr = "ID_match_v01;ID_WM"> </Image>
+		<Image Name = "ID-WM_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A-90-WM_A-90_E00.jpg" Attr = "ID_match_v01;ID_WM"> </Image>
+		<Image Name = "ID-WM_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A000-WM_A00_E00.jpg" Attr = "ID_match_v01;ID_WM"> </Image>
+		<Image Name = "ID-WM_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A045-WM_A45_E00.jpg" Attr = "ID_match_v01;ID_WM"> </Image>
+		<Image Name = "ID-WM_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A090-WM_A90_E00.jpg" Attr = "ID_match_v01;ID_WM"> </Image>
+		<Image Name = "ID-anakin_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_anakin_CIT_familiar_faces-macacca_mulatta-ORI_A-45-anakin_A-45_E00.jpg" Attr = "ID_match_v01;ID_anakin"> </Image>
+		<Image Name = "ID-anakin_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_anakin_CIT_familiar_faces-macacca_mulatta-ORI_A-90-anakin_A-90_E00.jpg" Attr = "ID_match_v01;ID_anakin"> </Image>
+		<Image Name = "ID-anakin_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_anakin_CIT_familiar_faces-macacca_mulatta-ORI_A000-anakin_A00_E00.jpg" Attr = "ID_match_v01;ID_anakin"> </Image>
+		<Image Name = "ID-anakin_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_anakin_CIT_familiar_faces-macacca_mulatta-ORI_A045-anakin_A45_E00.jpg" Attr = "ID_match_v01;ID_anakin"> </Image>
+		<Image Name = "ID-anakin_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_anakin_CIT_familiar_faces-macacca_mulatta-ORI_A090-anakin_A90_E00.jpg" Attr = "ID_match_v01;ID_anakin"> </Image>
+		<Image Name = "ID-benjamin_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_benjamin_CIT_familiar_faces-macacca_mulatta-ORI_A-45-benjamin_A-45_E00.jpg" Attr = "ID_match_v01;ID_benjamin"> </Image>
+		<Image Name = "ID-benjamin_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_benjamin_CIT_familiar_faces-macacca_mulatta-ORI_A-90-benjamin_A-90_E00.jpg" Attr = "ID_match_v01;ID_benjamin"> </Image>
+		<Image Name = "ID-benjamin_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_benjamin_CIT_familiar_faces-macacca_mulatta-ORI_A000-benjamin_A00_E00.jpg" Attr = "ID_match_v01;ID_benjamin"> </Image>
+		<Image Name = "ID-benjamin_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_benjamin_CIT_familiar_faces-macacca_mulatta-ORI_A045-benjamin_A45_E00.jpg" Attr = "ID_match_v01;ID_benjamin"> </Image>
+		<Image Name = "ID-benjamin_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_benjamin_CIT_familiar_faces-macacca_mulatta-ORI_A090-benjamin_A90_E00.jpg" Attr = "ID_match_v01;ID_benjamin"> </Image>
+		<Image Name = "ID-bert_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_bert_CIT_familiar_faces-macacca_mulatta-ORI_A-45-bert_A-45_E00.jpg" Attr = "ID_match_v01;ID_bert"> </Image>
+		<Image Name = "ID-bert_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_bert_CIT_familiar_faces-macacca_mulatta-ORI_A-90-bert_A-90_E00.jpg" Attr = "ID_match_v01;ID_bert"> </Image>
+		<Image Name = "ID-bert_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_bert_CIT_familiar_faces-macacca_mulatta-ORI_A000-bert_A00_E00.jpg" Attr = "ID_match_v01;ID_bert"> </Image>
+		<Image Name = "ID-bert_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_bert_CIT_familiar_faces-macacca_mulatta-ORI_A045-bert_A45_E00.jpg" Attr = "ID_match_v01;ID_bert"> </Image>
+		<Image Name = "ID-bert_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_bert_CIT_familiar_faces-macacca_mulatta-ORI_A090-bert_A90_E00.jpg" Attr = "ID_match_v01;ID_bert"> </Image>
+		<Image Name = "ID-dagobert_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_dagobert_CIT_familiar_faces-macacca_mulatta-ORI_A-45-dagobert_A-45_E00.jpg" Attr = "ID_match_v01;ID_dagobert"> </Image>
+		<Image Name = "ID-dagobert_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_dagobert_CIT_familiar_faces-macacca_mulatta-ORI_A-90-dagobert_A-90_E00.jpg" Attr = "ID_match_v01;ID_dagobert"> </Image>
+		<Image Name = "ID-dagobert_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_dagobert_CIT_familiar_faces-macacca_mulatta-ORI_A000-dagobert_A00_E00.jpg" Attr = "ID_match_v01;ID_dagobert"> </Image>
+		<Image Name = "ID-dagobert_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_dagobert_CIT_familiar_faces-macacca_mulatta-ORI_A045-dagobert_A45_E00.jpg" Attr = "ID_match_v01;ID_dagobert"> </Image>
+		<Image Name = "ID-dagobert_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_dagobert_CIT_familiar_faces-macacca_mulatta-ORI_A090-dagobert_A90_E00.jpg" Attr = "ID_match_v01;ID_dagobert"> </Image>
+		<Image Name = "ID-feivel_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_feivel_CIT_familiar_faces-macacca_mulatta-ORI_A-45-feivel_A-45_E00.jpg" Attr = "ID_match_v01;ID_feivel"> </Image>
+		<Image Name = "ID-feivel_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_feivel_CIT_familiar_faces-macacca_mulatta-ORI_A-90-feivel_A-90_E00.jpg" Attr = "ID_match_v01;ID_feivel"> </Image>
+		<Image Name = "ID-feivel_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_feivel_CIT_familiar_faces-macacca_mulatta-ORI_A000-feivel_A00_E00.jpg" Attr = "ID_match_v01;ID_feivel"> </Image>
+		<Image Name = "ID-feivel_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_feivel_CIT_familiar_faces-macacca_mulatta-ORI_A045-feivel_A45_E00.jpg" Attr = "ID_match_v01;ID_feivel"> </Image>
+		<Image Name = "ID-feivel_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_feivel_CIT_familiar_faces-macacca_mulatta-ORI_A090-feivel_A90_E00.jpg" Attr = "ID_match_v01;ID_feivel"> </Image>
+		<Image Name = "ID-houdini_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_houdini_CIT_familiar_faces-macacca_mulatta-ORI_A-45-houdini_A-45_E00.jpg" Attr = "ID_match_v01;ID_houdini"> </Image>
+		<Image Name = "ID-houdini_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_houdini_CIT_familiar_faces-macacca_mulatta-ORI_A-90-houdini_A-90_E00.jpg" Attr = "ID_match_v01;ID_houdini"> </Image>
+		<Image Name = "ID-houdini_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_houdini_CIT_familiar_faces-macacca_mulatta-ORI_A000-houdini_A00_E00.jpg" Attr = "ID_match_v01;ID_houdini"> </Image>
+		<Image Name = "ID-houdini_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_houdini_CIT_familiar_faces-macacca_mulatta-ORI_A045-houdini_A45_E00.jpg" Attr = "ID_match_v01;ID_houdini"> </Image>
+		<Image Name = "ID-houdini_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_houdini_CIT_familiar_faces-macacca_mulatta-ORI_A090-houdini_A90_E00.jpg" Attr = "ID_match_v01;ID_houdini"> </Image>
+		<Image Name = "ID-julien_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_julien_CIT_familiar_faces-macacca_mulatta-ORI_A-45-julien_A-45_E00.jpg" Attr = "ID_match_v01;ID_julien"> </Image>
+		<Image Name = "ID-julien_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_julien_CIT_familiar_faces-macacca_mulatta-ORI_A-90-julien_A-90_E00.jpg" Attr = "ID_match_v01;ID_julien"> </Image>
+		<Image Name = "ID-julien_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_julien_CIT_familiar_faces-macacca_mulatta-ORI_A000-julien_A00_E00.jpg" Attr = "ID_match_v01;ID_julien"> </Image>
+		<Image Name = "ID-julien_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_julien_CIT_familiar_faces-macacca_mulatta-ORI_A045-julien_A45_E00.jpg" Attr = "ID_match_v01;ID_julien"> </Image>
+		<Image Name = "ID-julien_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_julien_CIT_familiar_faces-macacca_mulatta-ORI_A090-julien_A90_E00.jpg" Attr = "ID_match_v01;ID_julien"> </Image>
+		<Image Name = "ID-maurice_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_maurice_CIT_familiar_faces-macacca_mulatta-ORI_A-45-maurice_A-45_E00.jpg" Attr = "ID_match_v01;ID_maurice"> </Image>
+		<Image Name = "ID-maurice_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_maurice_CIT_familiar_faces-macacca_mulatta-ORI_A-90-maurice_A-90_E00.jpg" Attr = "ID_match_v01;ID_maurice"> </Image>
+		<Image Name = "ID-maurice_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_maurice_CIT_familiar_faces-macacca_mulatta-ORI_A000-maurice_A00_E00.jpg" Attr = "ID_match_v01;ID_maurice"> </Image>
+		<Image Name = "ID-maurice_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_maurice_CIT_familiar_faces-macacca_mulatta-ORI_A045-maurice_A45_E00.jpg" Attr = "ID_match_v01;ID_maurice"> </Image>
+		<Image Name = "ID-maurice_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_maurice_CIT_familiar_faces-macacca_mulatta-ORI_A090-maurice_A90_E00.jpg" Attr = "ID_match_v01;ID_maurice"> </Image>
+		<Image Name = "ID-michel_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_michel_CIT_familiar_faces-macacca_mulatta-ORI_A-45-michel_A-45_E00.jpg" Attr = "ID_match_v01;ID_michel"> </Image>
+		<Image Name = "ID-michel_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_michel_CIT_familiar_faces-macacca_mulatta-ORI_A-90-michel_A-90_E00.jpg" Attr = "ID_match_v01;ID_michel"> </Image>
+		<Image Name = "ID-michel_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_michel_CIT_familiar_faces-macacca_mulatta-ORI_A000-michel_A00_E00.jpg" Attr = "ID_match_v01;ID_michel"> </Image>
+		<Image Name = "ID-michel_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_michel_CIT_familiar_faces-macacca_mulatta-ORI_A045-michel_A45_E00.jpg" Attr = "ID_match_v01;ID_michel"> </Image>
+		<Image Name = "ID-michel_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_michel_CIT_familiar_faces-macacca_mulatta-ORI_A090-michel_A90_E00.jpg" Attr = "ID_match_v01;ID_michel"> </Image>
+		<Image Name = "ID-napoleon_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_napoleon_CIT_familiar_faces-macacca_mulatta-ORI_A-45-napoleon_A-45_E00.jpg" Attr = "ID_match_v01;ID_napoleon"> </Image>
+		<Image Name = "ID-napoleon_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_napoleon_CIT_familiar_faces-macacca_mulatta-ORI_A-90-napoleon_A-90_E00.jpg" Attr = "ID_match_v01;ID_napoleon"> </Image>
+		<Image Name = "ID-napoleon_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_napoleon_CIT_familiar_faces-macacca_mulatta-ORI_A000-napoleon_A00_E00.jpg" Attr = "ID_match_v01;ID_napoleon"> </Image>
+		<Image Name = "ID-napoleon_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_napoleon_CIT_familiar_faces-macacca_mulatta-ORI_A045-napoleon_A45_E00.jpg" Attr = "ID_match_v01;ID_napoleon"> </Image>
+		<Image Name = "ID-napoleon_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_napoleon_CIT_familiar_faces-macacca_mulatta-ORI_A090-napoleon_A90_E00.jpg" Attr = "ID_match_v01;ID_napoleon"> </Image>
+		<Image Name = "ID-quincy_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_quincy_CIT_familiar_faces-macacca_mulatta-ORI_A-45-quincy_A-45_E00.jpg" Attr = "ID_match_v01;ID_quincy"> </Image>
+		<Image Name = "ID-quincy_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_quincy_CIT_familiar_faces-macacca_mulatta-ORI_A-90-quincy_A-90_E00.jpg" Attr = "ID_match_v01;ID_quincy"> </Image>
+		<Image Name = "ID-quincy_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_quincy_CIT_familiar_faces-macacca_mulatta-ORI_A000-quincy_A00_E00.jpg" Attr = "ID_match_v01;ID_quincy"> </Image>
+		<Image Name = "ID-quincy_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_quincy_CIT_familiar_faces-macacca_mulatta-ORI_A045-quincy_A45_E00.jpg" Attr = "ID_match_v01;ID_quincy"> </Image>
+		<Image Name = "ID-quincy_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_quincy_CIT_familiar_faces-macacca_mulatta-ORI_A090-quincy_A90_E00.jpg" Attr = "ID_match_v01;ID_quincy"> </Image>
+		<Image Name = "ID-rocco_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_rocco_CIT_familiar_faces-macacca_mulatta-ORI_A-45-rocco_A-45_E00.jpg" Attr = "ID_match_v01;ID_rocco"> </Image>
+		<Image Name = "ID-rocco_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_rocco_CIT_familiar_faces-macacca_mulatta-ORI_A-90-rocco_A-90_E00.jpg" Attr = "ID_match_v01;ID_rocco"> </Image>
+		<Image Name = "ID-rocco_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_rocco_CIT_familiar_faces-macacca_mulatta-ORI_A000-rocco_A00_E00.jpg" Attr = "ID_match_v01;ID_rocco"> </Image>
+		<Image Name = "ID-rocco_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_rocco_CIT_familiar_faces-macacca_mulatta-ORI_A045-rocco_A45_E00.jpg" Attr = "ID_match_v01;ID_rocco"> </Image>
+		<Image Name = "ID-rocco_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_rocco_CIT_familiar_faces-macacca_mulatta-ORI_A090-rocco_A90_E00.jpg" Attr = "ID_match_v01;ID_rocco"> </Image>
+		<Image Name = "ID-spiderman_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_spiderman_CIT_familiar_faces-macacca_mulatta-ORI_A-45-spiderman_A-45_E00.jpg" Attr = "ID_match_v01;ID_spiderman"> </Image>
+		<Image Name = "ID-spiderman_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_spiderman_CIT_familiar_faces-macacca_mulatta-ORI_A-90-spiderman_A-90_E00.jpg" Attr = "ID_match_v01;ID_spiderman"> </Image>
+		<Image Name = "ID-spiderman_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_spiderman_CIT_familiar_faces-macacca_mulatta-ORI_A000-spiderman_A00_E00.jpg" Attr = "ID_match_v01;ID_spiderman"> </Image>
+		<Image Name = "ID-spiderman_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_spiderman_CIT_familiar_faces-macacca_mulatta-ORI_A045-spiderman_A45_E00.jpg" Attr = "ID_match_v01;ID_spiderman"> </Image>
+		<Image Name = "ID-spiderman_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_spiderman_CIT_familiar_faces-macacca_mulatta-ORI_A090-spiderman_A90_E00.jpg" Attr = "ID_match_v01;ID_spiderman"> </Image>
+		<Image Name = "ID-tyson_ORI-A-45" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_tyson_CIT_familiar_faces-macacca_mulatta-ORI_A-45-tyson_A-45_E00.jpg" Attr = "ID_match_v01;ID_tyson"> </Image>
+		<Image Name = "ID-tyson_ORI-A-90" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_tyson_CIT_familiar_faces-macacca_mulatta-ORI_A-90-tyson_A-90_E00.jpg" Attr = "ID_match_v01;ID_tyson"> </Image>
+		<Image Name = "ID-tyson_ORI-A000" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_tyson_CIT_familiar_faces-macacca_mulatta-ORI_A000-tyson_A00_E00.jpg" Attr = "ID_match_v01;ID_tyson"> </Image>
+		<Image Name = "ID-tyson_ORI-A045" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_tyson_CIT_familiar_faces-macacca_mulatta-ORI_A045-tyson_A45_E00.jpg" Attr = "ID_match_v01;ID_tyson"> </Image>
+		<Image Name = "ID-tyson_ORI-A090" FileName = "\\KOFIKO-USER-23A\StimulusSet\AM_familiarity_02\ID_tyson_CIT_familiar_faces-macacca_mulatta-ORI_A090-tyson_A90_E00.jpg" Attr = "ID_match_v01;ID_tyson"> </Image>
+	</Media>
+	
+</Config>
+
