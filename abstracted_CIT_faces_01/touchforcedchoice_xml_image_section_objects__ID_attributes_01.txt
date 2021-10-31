@@ -1,0 +1,18 @@
+ <Media>
+ <Image Name = "ID_BR-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.jpg" Attr = "cartoon;ID_BR"> </Image>
+ <Image Name = "ID_BR-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing.png" Attr = "linedrawing;ID_BR"> </Image>
+ <Image Name = "ID_BR-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "mooney;ID_BR"> </Image>
+ <Image Name = "ID_BR-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BR_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.tif" Attr = "silhouette;ID_BR"> </Image>
+ <Image Name = "ID_BT-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.jpg" Attr = "cartoon;ID_BT"> </Image>
+ <Image Name = "ID_BT-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing.png" Attr = "linedrawing;ID_BT"> </Image>
+ <Image Name = "ID_BT-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "mooney;ID_BT"> </Image>
+ <Image Name = "ID_BT-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_BT_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.jpg" Attr = "silhouette;ID_BT"> </Image>
+ <Image Name = "ID_SN-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.jpg" Attr = "cartoon;ID_SN"> </Image>
+ <Image Name = "ID_SN-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing.png" Attr = "linedrawing;ID_SN"> </Image>
+ <Image Name = "ID_SN-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "mooney;ID_SN"> </Image>
+ <Image Name = "ID_SN-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_SN_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.tif" Attr = "silhouette;ID_SN"> </Image>
+ <Image Name = "ID_WM-ORI_A000_E000-TRF_cartoon" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_cartoon.jpg" Attr = "cartoon;ID_WM"> </Image>
+ <Image Name = "ID_WM-ORI_A000_E000-TRF_linedrawing" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A00_E00-TRF_linedrawing.png" Attr = "linedrawing;ID_WM"> </Image>
+ <Image Name = "ID_WM-ORI_A045_E000-TRF_mooney" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A45_E00-TRF_mooney.tif" Attr = "mooney;ID_WM"> </Image>
+ <Image Name = "ID_WM-ORI_A090_E000-TRF_silhouette" FileName = "\\KOFIKO-USER-23A\StimulusSet\abstracted_CIT_faces_01\ID_WM_CIT_familiar_faces-homo_sapiens-ORI_A90_E00-TRF_silhouette.jpg" Attr = "silhouette;ID_WM"> </Image>
+ </Media>
